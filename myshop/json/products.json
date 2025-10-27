@@ -1,0 +1,198 @@
+[
+{
+  "model": "shop.category",
+  "pk": 1,
+  "fields": {
+    "title": "Fast Food",
+    "slug": "fast-food"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 2,
+  "fields": {
+    "title": "Cold Drinks",
+    "slug": "cold-drinks"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 1,
+  "fields": {
+    "category": 1,
+    "title": "Pizza",
+    "slug": "pizza",
+    "image": "products/2025/10/25/pizza.png",
+    "description": "Freshly baked with gooey cheese",
+    "price": "999.00",
+    "available": true,
+    "created": "2025-10-25T09:31:02.267Z",
+    "updated": "2025-10-25T09:31:02.267Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 2,
+  "fields": {
+    "category": 1,
+    "title": "Chicken Burger",
+    "slug": "chicken-burger",
+    "image": "products/2025/10/26/burger.png",
+    "description": "Juicy, grilled perfection.",
+    "price": "599.00",
+    "available": true,
+    "created": "2025-10-25T09:31:56.836Z",
+    "updated": "2025-10-26T11:22:56.959Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 3,
+  "fields": {
+    "category": 1,
+    "title": "Chicken Roll",
+    "slug": "chicken-roll",
+    "image": "products/2025/10/25/chickenroll.png",
+    "description": "A tasty, on-the-go treat.",
+    "price": "299.00",
+    "available": true,
+    "created": "2025-10-25T09:32:40.825Z",
+    "updated": "2025-10-25T09:32:40.825Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 4,
+  "fields": {
+    "category": 1,
+    "title": "Chicken Momo",
+    "slug": "chicken-momo",
+    "image": "products/2025/10/25/momo.png",
+    "description": "Steamed or fried, packed with flavor.",
+    "price": "249.00",
+    "available": true,
+    "created": "2025-10-25T09:33:35.490Z",
+    "updated": "2025-10-25T09:33:35.490Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 5,
+  "fields": {
+    "category": 1,
+    "title": "Large Fries",
+    "slug": "large-fries",
+    "image": "products/2025/10/26/fries.png",
+    "description": "Crispy, golden, and salty.",
+    "price": "199.00",
+    "available": true,
+    "created": "2025-10-25T09:35:05.285Z",
+    "updated": "2025-10-26T11:20:43.918Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 6,
+  "fields": {
+    "category": 2,
+    "title": "Classic Coke",
+    "slug": "classic-coke",
+    "image": "products/2025/10/26/coke.png",
+    "description": "The perfect chilled companion.",
+    "price": "69.00",
+    "available": true,
+    "created": "2025-10-25T09:36:07.640Z",
+    "updated": "2025-10-26T11:20:11.947Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 7,
+  "fields": {
+    "category": 2,
+    "title": "Coke Zero",
+    "slug": "coke-zero",
+    "image": "products/2025/10/26/cokezero.png",
+    "description": "The perfect chilled companion with zero calories.",
+    "price": "79.00",
+    "available": true,
+    "created": "2025-10-25T09:37:43.641Z",
+    "updated": "2025-10-26T11:20:21.894Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 8,
+  "fields": {
+    "category": 2,
+    "title": "Sprite",
+    "slug": "sprite",
+    "image": "products/2025/10/26/sprite.png",
+    "description": "The perfect chilled companion.",
+    "price": "69.00",
+    "available": true,
+    "created": "2025-10-25T09:38:07.694Z",
+    "updated": "2025-10-26T11:22:23.707Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 9,
+  "fields": {
+    "category": 2,
+    "title": "Monster",
+    "slug": "monster",
+    "image": "products/2025/10/26/monster.png",
+    "description": "The perfect chilled companion.",
+    "price": "99.00",
+    "available": true,
+    "created": "2025-10-25T09:38:51.012Z",
+    "updated": "2025-10-26T11:21:04.376Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 10,
+  "fields": {
+    "category": 2,
+    "title": "Monster White",
+    "slug": "monster-white",
+    "image": "products/2025/10/26/monsterw.png",
+    "description": "The perfect chilled companion.",
+    "price": "99.00",
+    "available": true,
+    "created": "2025-10-25T09:41:32.661Z",
+    "updated": "2025-10-26T11:21:12.869Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 11,
+  "fields": {
+    "category": 2,
+    "title": "Mirinda",
+    "slug": "mirinda",
+    "image": "products/2025/10/26/mirinda.png",
+    "description": "The perfect chilled companion.",
+    "price": "99.00",
+    "available": true,
+    "created": "2025-10-25T09:41:59.700Z",
+    "updated": "2025-10-26T11:20:53.932Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 12,
+  "fields": {
+    "category": 2,
+    "title": "Fanta",
+    "slug": "fanta",
+    "image": "products/2025/10/26/fanta.png",
+    "description": "The perfect chilled companion.",
+    "price": "69.00",
+    "available": true,
+    "created": "2025-10-25T09:42:25.455Z",
+    "updated": "2025-10-26T11:28:09.489Z"
+  }
+}
+]
