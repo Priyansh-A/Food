@@ -15,11 +15,11 @@
       </a>
     </h2>
     <p class="price">रु {{ product.price }}</p>
-    {% comment %} <form action="{% url "cart:cart_add" product.id %}" method="post">
+    <form action="{% url "cart:cart_add" product.id %}" method="post">
       {{ cart_product_form }}
       {% csrf_token %}
       <input type="submit" value="Add to cart">
-    </form> {% endcomment %}
+    </form> 
     {{ product.description|linebreaks }}
     <div class="recommendations">
       <h3>People who bought this also bought</h3>
