@@ -20,7 +20,6 @@
     </ul>
   </div>
   <div id="main" class="product-list">
-    {% comment %} <h1>{% if category %}{{ category.title }}{% else %}Products{% endif %}</h1> {% endcomment %}
     {% for product in products %}
       <div class="item">
         <a href="{{ product.get_absolute_url }}">
