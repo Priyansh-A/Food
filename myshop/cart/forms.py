@@ -7,7 +7,7 @@ class CartAddProductForm(forms.Form):
         widget=forms.NumberInput(attrs={
             'class': 'quantity-input compact-orange',
             'min': '1',
-            'style': 'width: 35px; color:orange; margin:5px;'
+            'style': 'width: 40px; color:orange; margin:5px;'
         })
     )
     override = forms.BooleanField(

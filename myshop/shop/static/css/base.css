@@ -215,6 +215,21 @@ ul.errorlist {
 #subheader .cart {
     float: right;
     padding-top: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.cart-img{
+    width: 35px;
+    height: 35px; 
+    vertical-align: middle; 
+    margin-left: 5px;  
+    transition: all 0.3s ease;
+}
+
+.cart-img:hover {
+    transform: scale(1.2);
+    filter: brightness(0) saturate(100%) invert(47%) sepia(90%) saturate(1302%) hue-rotate(1deg) brightness(101%) contrast(105%);
 }
 
 /* Content Layout */
