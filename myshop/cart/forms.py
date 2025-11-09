@@ -1,13 +1,15 @@
 from django import forms
 
-PRODUCT_QUANTITY_CHOICES = [(i , str(i)) for i in range(1,21)]
-
 class CartAddProductForm(forms.Form):
     quantity = forms.IntegerField(
+        min_value=1,
+        initial=1,
         widget=forms.NumberInput(attrs={
             'class': 'quantity-input compact-orange',
             'min': '1',
-            'style': 'width: 40px; color:orange; margin:5px;'
+            'max': '20',
+            'value': '1',
+            'style': 'width: 60px; text-align: center; color: orange; margin: 5px 5px;'
         })
     )
     override = forms.BooleanField(
@@ -15,5 +17,3 @@ class CartAddProductForm(forms.Form):
         initial=False,
         widget=forms.HiddenInput(attrs={'class': 'override-field'})
     )
-    
-    

@@ -29,6 +29,7 @@
               </a>
             </td>
             <td>{{ product.title }}</td>
+            </div>
             <td>
             <form action="{% url "cart:cart_add" product.id %}" method="post">
                 {{ item.update_quantity_form.quantity }}
@@ -46,12 +47,13 @@
             <td class="num">रु {{ item.price }}</td>
             <td class="num">रु {{ item.total_price }}</td>
           </tr>
+            </div>
         {% endwith %}
       {% endfor %}
       <tr class="total">
         <td>Total</td>
         <td colspan="4"></td>
-        <td style="color:white" class="num">रु {{ cart.get_total_price }}</td>
+        <td class="num">रु {{ cart.get_total_price }}</td>
       </tr>
     </tbody>
   </table>

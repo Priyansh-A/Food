@@ -112,6 +112,13 @@ thead th, tbody tr.total {
     font-weight: 700;
 }
 
+tbody tr.total td:last-child {
+        text-align: right;
+        font-size: 20px;
+        flex: none;
+        color: #f8f8f8;
+    }
+
 table.cart {
     margin-bottom: 40px;
 }
@@ -607,11 +614,6 @@ form div.field:focus-within {
         margin-top: 20px;
     }
 
-    table.cart img {
-        width: 80px;
-        height: 80px;
-    }
-
     .recommendations img {
         width: 150px;
         height: 150px;
@@ -620,6 +622,92 @@ form div.field:focus-within {
     .recommendations.cart img {
         width: 100px;
         height: 100px;
+    }
+}
+
+@media (max-width: 700px){
+    table.cart thead {
+        display: none;
+    }
+    
+    table.cart, table.cart tbody, table.cart tr {
+        display: block;
+        width: 100%;
+    }
+    
+    table.cart tr {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        padding: 16px;
+        border-bottom: 2px solid #ffd4c1;
+        background: #fef8f5;
+        position: relative;
+    }
+    table.cart tr:nth-child(odd) {
+        background: #fff;
+    }
+    
+    table.cart tr:hover {
+        background: #ffe8df;
+    }
+
+        table.cart td:first-child {
+        flex: 0 0 auto;
+        width: 35%;
+        max-width: 140px;
+        min-width: 100px;
+        text-align: center;
+        padding-right: 12px;
+    }
+    
+    table.cart img {
+        width: 100%;
+        height: auto;
+        max-width: 120px;
+        min-width: 80px;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    tbody tr.total {
+        background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%) !important;
+        color: #fff;
+        font-weight: 700;
+        display: flex !important;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 16px;
+    }
+    
+    tbody tr.total td {
+        background: transparent !important;
+        color: #fff !important;
+        border: none !important;
+        padding: 0;
+        text-align: left;
+    }
+    
+    tbody tr.total td:first-child {
+        flex: none;
+        width: auto;
+        font-size: 18px;
+    }
+    
+    tbody tr.total td:last-child {
+        text-align: right;
+        font-size: 20px;
+        flex: none;
+    }
+    
+    tbody tr.total td[colspan="4"] {
+        display: none;
+    }
+    
+    tbody tr.subtotal {
+        font-weight: 600;
+        background: #f8f8f8;
     }
 }
 
@@ -649,3 +737,5 @@ form div.field:focus-within {
         font-size: 14px;
     }
 }
+
+
