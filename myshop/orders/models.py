@@ -12,7 +12,7 @@ class Order(models.Model):
     updated = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)
     paid = models.BooleanField(default=False)
-    
+    transaction_id = models.CharField(max_length=100, blank=True)
     class Meta:
         ordering = ['-created']
         indexes = [
@@ -25,6 +25,8 @@ class Order(models.Model):
     def get_total_cost(self):
         return sum(item.get_cost() for item in self.items.all())
     
+    def get_tax_amount(self):
+        return self.get_total_cost() * 0.13
     
 class OrderItem(models.Model):
     order = models.ForeignKey(
