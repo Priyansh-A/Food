@@ -49,8 +49,14 @@ def admin_order_pdf(request, order_id):
     html = render_to_string('orders/order/pdf.html', {'order': order})
     response = HttpResponse(content_type='application/pdf')
     response['Content-Disposition'] = f'filename=order_{order.id}.pdf'
-    weasyprint.HTML(string=html).write_pdf(
-        response,
+    # Create HTML object with base_url
+    html_obj = weasyprint.HTML(
+        string=html,
+        base_url=request.build_absolute_uri()
+    )
+    # Write PDF using explicit keyword arguments
+    html_obj.write_pdf(
+        target=response,
         stylesheets=[weasyprint.CSS(finders.find('css/pdf.css'))],
     )
     return response
