@@ -2,6 +2,8 @@ import hmac
 import hashlib
 import base64
 import uuid
+import json 
+from django.views.decorators.csrf import csrf_exempt 
 from django.shortcuts import render, get_object_or_404, redirect
 from orders.models import Order
 
@@ -15,6 +17,8 @@ def payment_process(request):
     
     total_amount = str(int(order.get_total_cost()))
     transaction_uuid = uuid.uuid4()
+    order.transaction_id = transaction_uuid
+    order.save()
     product_code = "EPAYTEST"
     data_to_sign = f"total_amount={total_amount},transaction_uuid={transaction_uuid},product_code={product_code}"
     
@@ -43,9 +47,62 @@ def payment_process(request):
     
     return render(request, 'payment/process.html', context)
 
-
-def payment_success(request):
-    return render(request, 'payment/completed.html')
     
 def payment_failure(request):
     return render(request, 'payment/canceled.html')
+
+@csrf_exempt
+def payment_success(request):
+    encoded_data = request.GET.get('data', '')
+    
+    if encoded_data:
+        try:
+            # Decode the base64 data
+            decoded_data = base64.b64decode(encoded_data).decode('utf-8')
+            transaction_data = json.loads(decoded_data)
+            
+            # Extract transaction details
+            transaction_code = transaction_data.get('transaction_code', '')
+            status = transaction_data.get('status', '')
+            total_amount = transaction_data.get('total_amount', '')
+            transaction_uuid = transaction_data.get('transaction_uuid', '')
+            
+            # Get order_id from session
+            order_id = request.session.get('order_id')
+            if order_id:
+                order = Order.objects.get(id=order_id)
+                
+                if status == 'COMPLETE':
+                    order.paid = True
+                    order.transaction_id = transaction_code
+                    order.save()
+                    
+                    # Clear sessions
+                    if 'order_id' in request.session:
+                        del request.session['order_id']
+                    if 'cart_id' in request.session:  
+                        del request.session['cart_id']
+                    
+                    return render(request, 'payment/completed.html', {
+                        'order': order,
+                        'transaction_code': transaction_code
+                    })
+                else:
+                    # Payment failed or was incomplete
+                    return render(request, 'payment/canceled.html', {
+                        'order': order,
+                        'status': status
+                    })
+            else:
+                return render(request, 'payment/error.html', {
+                    'error': 'Order not found in session'
+                })
+                
+        except Exception as e:
+            return render(request, 'payment/error.html', {
+                'error': f'Error processing payment: {str(e)}'
+            })
+    
+    return render(request, 'payment/error.html', {
+        'error': 'Invalid payment data received'
+    })
