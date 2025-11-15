@@ -136,11 +136,50 @@ tbody td.num {
     font-weight: 600;
     color: #ff6b35;
 }
+    
+tbody td {
+        font-weight: 600;
+    }
 
 td input[type="submit"] {
     font-size: 13px;
     padding: 6px 16px;
+    width: 80px;
 }
+
+.box-form {
+    width: 200px !important;
+    font-size: 15px !important;
+    margin-bottom: 20px;
+}
+
+.coupon {
+    font-size: 13px;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 500;
+}
+
+.box-form input,
+.box-form select,
+.box-form textarea {
+    width: 100%;
+    padding: 6px 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 15px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+}
+
+.box-form input:focus,
+.box-form select:focus,
+.box-form textarea:focus {
+    outline: none;
+    border-color: #4CAF50;
+    background-color: white;
+}
+
 
 /* Forms */
 form p label, form p input {
@@ -652,7 +691,7 @@ form div.field:focus-within {
         background: #ffe8df;
     }
 
-        table.cart td:first-child {
+    table.cart td:first-child {
         flex: 0 0 auto;
         width: 35%;
         max-width: 140px;
@@ -703,12 +742,13 @@ form div.field:focus-within {
     
     tbody tr.total td[colspan="4"] {
         display: none;
-    }
-    
+    } 
+
     tbody tr.subtotal {
-        font-weight: 600;
-        background: #f8f8f8;
+    background: #ffd4c1 !important;
+    font-weight: 600;
     }
+
 }
 
 @media (max-width: 480px) {
@@ -732,10 +772,10 @@ form div.field:focus-within {
         grid-template-columns: 1fr;
     }
 
-    a.button, input[type="submit"] {
+    /* a.button, input[type="submit"] {
         padding: 10px 20px;
         font-size: 14px;
-    }
+    } */
 }
 
 
