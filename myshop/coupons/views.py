@@ -20,6 +20,8 @@ def coupon_apply(request):
                 active = True
             )
             request.session['coupon_id'] = coupon.id
+            request.session.modified = True
         except Coupon.DoesNotExist:
             request.session['coupon_id'] = None
+            request.session.modified = True
     return redirect('cart:cart_detail')
