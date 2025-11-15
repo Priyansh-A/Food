@@ -6,6 +6,8 @@ import json
 from django.views.decorators.csrf import csrf_exempt 
 from django.shortcuts import render, get_object_or_404, redirect
 from orders.models import Order
+from shop.models import Product
+from shop.recommender import Recommender
 
 
 def payment_process(request):
@@ -76,6 +78,11 @@ def payment_success(request):
                     order.paid = True
                     order.transaction_id = transaction_code
                     order.save()
+                    
+                    product_ids = order.items.values_list('product_id')
+                    products = Product.objects.filter(id__in=product_ids)
+                    r = Recommender()
+                    r.products_bought(products)
                     
                     # Clear sessions
                     if 'order_id' in request.session:

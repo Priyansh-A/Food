@@ -85,6 +85,13 @@ class Cart:
                 pass
         return None
     
+    def clear_coupon(self):
+        """Remove coupon from session"""
+        if 'coupon_id' in self.session:
+            del self.session['coupon_id']
+        self.coupon_id = None
+        self.session.modified = True
+    
     def get_discount(self):
         if self.coupon:
             return (
