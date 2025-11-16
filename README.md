@@ -79,5 +79,9 @@ A modern, dockerized e-commerce platform built with Django, featuring shopping c
 6. **Adding the recommendations row**
    ```bash
    docker-compose exec web python manage.py populate_recommendations
-
+7. **Add coupons in the admin/ page and apply them to cart**
+8. **Esewa Sandbox test details**
+   9806800001
+   Nepal@123
+   123456   
 
