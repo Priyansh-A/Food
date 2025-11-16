@@ -67,7 +67,10 @@ A modern, dockerized e-commerce platform built with Django, featuring shopping c
 2. **Build in Docker**
    ```bash
    docker-compose up --build
-3. **Create Superuser for admin privilages**
+3. **bash command in case of wait-for-it.sh error**
+   ```bash
+   dos2unix wait-for-it.sh
+4. **Create Superuser for admin privilages**
    ```bash
    docker-compose exec web python manage.py createsuperuser
    
