@@ -33,7 +33,7 @@ A modern, dockerized e-commerce platform built with Django, featuring shopping c
 ## 🛠️ Tech Stack
 
 **Backend:**
-- Django 4.2+ (Python)
+- Django 5.2+ (Python)
 - PostgreSQL (Database)
 - Session-based cart management
 - Payment gateway integration
