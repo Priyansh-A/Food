@@ -595,7 +595,7 @@ form div.field:focus-within {
 }
 
 /* Responsive Design */
-@media (min-width: 768px) {
+@media (min-width: 790px) {
     #sidebar {
         width: 240px;
         padding: 0 30px 0 0;
@@ -631,7 +631,7 @@ form div.field:focus-within {
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 790px) {
     #header .logo {
         font-size: 24px;
     }
@@ -772,10 +772,5 @@ form div.field:focus-within {
         grid-template-columns: 1fr;
     }
 
-    /* a.button, input[type="submit"] {
-        padding: 10px 20px;
-        font-size: 14px;
-    } */
 }
-
 

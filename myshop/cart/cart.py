@@ -75,6 +75,7 @@ class Cart:
         del self.session[settings.CART_SESSION_ID]
         self.save()
         
+        self.clear_coupon()
     
     @property
     def coupon(self):
@@ -89,6 +90,7 @@ class Cart:
         """Remove coupon from session"""
         if 'coupon_id' in self.session:
             del self.session['coupon_id']
+            self.save()
         self.coupon_id = None
         self.session.modified = True
     
