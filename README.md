@@ -75,6 +75,9 @@ A modern, dockerized e-commerce platform built with Django, featuring shopping c
    docker-compose exec web python manage.py createsuperuser
 5. **Filling data in the site**
    ```bash
-   docker-compose exec web python manage.py loaddata products.json
+   docker-compose exec web python manage.py loaddata json/products.json
+6. **Adding the recommendations row**
+   ```bash
+   docker-compose exec web python manage.py populate_recommendations
 
 
