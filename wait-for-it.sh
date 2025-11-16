@@ -62,10 +62,6 @@ python manage.py migrate --noinput
 echo "Collecting static files..."
 python manage.py collectstatic --noinput --clear
 
-# Populate recommendation engine
-echo "Populating recommendation engine..."
-python manage.py populate_recommendations
-
 # Start Gunicorn
 echo "Starting Gunicorn..."
 exec gunicorn myshop.wsgi:application --bind 0.0.0.0:8000 --workers 3
