@@ -63,7 +63,7 @@ A modern, dockerized e-commerce platform built with Django, featuring shopping c
 1. **Clone the repository**
    ```bash
    git clone https://github.com/Priyansh-A/Food.git
-   cd myshop
+   cd Food
 2. **Build in Docker**
    ```bash
    docker-compose up --build
