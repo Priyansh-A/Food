@@ -1,68 +1,62 @@
-🍕 Heaven's Door - Django E-commerce Food Delivery Platform
+# 🛒 Heaven's Door - Django E-commerce Platform
 
-A modern, dockerized food delivery e-commerce platform built with Django, featuring real-time cart management, coupon system, and restaurant management.
+A modern, dockerized e-commerce platform built with Django, featuring shopping cart, order management, payment processing, and coupon system.
 
-🚀 Features
-🛒 Shopping Experience
+![Django](https://img.shields.io/badge/Django-4.2-green)
+![Docker](https://img.shields.io/badge/Docker-Ready-blue)
+![E-commerce](https://img.shields.io/badge/E--commerce-Platform-orange)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue)
 
-Smart Cart System: Persistent cart with session management
+## 🚀 Features
 
-Coupon & Discounts: Apply promotional codes and discounts
+### 🛍️ Product Management
+- **Categories & Organization**: Organize products by categories with SEO-friendly URLs
+- **Detailed Product Pages**: Rich product information with images and descriptions
 
-Real-time Cart Updates: Instant cart modifications and calculations
+### 🛒 Shopping Cart System
+- **Session-based Cart**: Persistent shopping cart across browser sessions
+- **Real-time Updates**: Instant cart modifications and quantity changes
+- **Cart Management**: Easy add, remove, and update cart items
+- **Price Calculations**: Automatic product, discount, and total calculations
 
-Order Management: Complete order processing and tracking
+### 💳 Payment & Order Processing
+- **Esewa Sandbox**: Integrated payment gateway with Esewa 
+- **Order Management**: Complete order lifecycle from creation to fulfillment
+- **PDF Invoices**: Automatic invoice generation for orders
+- **Order Tracking**: Monitor order status and history
 
-💰 Payment & Promotions
+### 🎫 Promotions & Discounts
+- **Coupon System**: Apply promotional codes and discounts
+- **Flexible Campaigns**: Time-based and usage-limited coupon strategies
+- **Cart Calculations**: Automatic discount application and validation
 
-Coupon System: Time-based and usage-limited discount coupons
-    
-Promotional Campaigns: Support for various discount strategies
+## 🛠️ Tech Stack
 
-🏗️ Modern Architecture
+**Backend:**
+- Django 4.2+ (Python)
+- PostgreSQL (Database)
+- Session-based cart management
+- Payment gateway integration
 
-Dockerized: Easy deployment with Docker Compose
+**Frontend:**
+- HTML5, CSS3, JavaScript
+- Responsive design for all devices
+- Dynamic form handling and validation
 
-Production Ready: Nginx and Gunicorn setup
+**Servers:**
+- Gunicorn (WSGI HTTP Server)
+- Nginx (Reverse Proxy & Static Files)
 
-Scalable: PostgreSQL database with optimized queries
+**Infrastructure:**
+- Docker & Docker Compose
+- Multi-container architecture
+- Production-ready deployment
 
-Session Management: Secure cart and user session handling
+## 📦 Quick Start
 
-🛠️ Tech Stack
-
-Backend:
-
-Django 4.2+ (Python)
-
-Django Sessions (Cart Management)
-
-PostgreSQL (Database)
-
-Redis (Optional caching)
-
-Frontend:
-
-HTML5, CSS3, JavaScript
-
-Servers:
-
-Gunicorn (WSGI HTTP Server)
-
-Nginx (Reverse Proxy & Static Files)
-
-Infrastructure:
-
-Docker & Docker Compose
-
-Multi-container architecture
-
-📦 Quick Start
-Prerequisites
-
-Docker & Docker Compose
-
-Git
+### Prerequisites
+- Docker & Docker Compose
+- Git
 
 ### Installation
 
