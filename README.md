@@ -2,7 +2,7 @@
 
 A modern, dockerized e-commerce platform built with Django, featuring shopping cart, order management, payment processing, and coupon system.
 
-![Django](https://img.shields.io/badge/Django-4.2-green)
+![Django](https://img.shields.io/badge/Django-5.2-green)
 ![Docker](https://img.shields.io/badge/Docker-Ready-blue)
 ![E-commerce](https://img.shields.io/badge/E--commerce-Platform-orange)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue)
