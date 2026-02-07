@@ -60,7 +60,12 @@ A modern, dockerized e-commerce platform built with Django, featuring shopping c
 
 ### Installation
 
-1. **Copy the docker-compose-prod.yml and wait-for-it.sh file to your device**
+1. **Copy the docker-compose-prod.yml, wait-for-it.sh file and the config directory to your device**
+   **Or simply just clone the project**
+   ```bash
+   git clone https://github.com/Priyansh-A/Food.git
+   cd Food
+   ```  
 2. **Run the command**
  ```bash
    docker-compose -f "filename" up
@@ -69,7 +74,17 @@ A modern, dockerized e-commerce platform built with Django, featuring shopping c
  ```bash
    dos2unix wait-for-it.sh
    ```
-4. **Esewa Sandbox test details**
+4. **Create Superuser for admin privilages**
+   ```bash
+   docker-compose exec webapp python manage.py createsuperuser
+5. **Filling data in the site**
+   ```bash
+   docker-compose exec webapp python manage.py loaddata json/products.json
+6. **Adding the recommendations row**
+   ```bash
+   docker-compose exec webapp python manage.py populate_recommendations
+7. **Add coupons in the admin/ page and apply them to cart**
+8. **Esewa Sandbox test details**
    9806800001
    Nepal@123
    123456   
