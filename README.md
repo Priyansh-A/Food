@@ -60,7 +60,7 @@ A modern, dockerized e-commerce platform built with Django, featuring shopping c
 
 ### Installation
 
-1. **Copy the docker-compose-prod.yml, wait-for-it.sh file and the config directory to your device**
+1. **Copy the docker-compose-prod.yml, wait-for-it.sh and the default.conf file to your device**
    **Or simply just clone the project**
    ```bash
    git clone https://github.com/Priyansh-A/Food.git
