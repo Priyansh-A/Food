@@ -1,14 +1,14 @@
 services:
 
-  web:
+  webapp:
     build: .
     command: ["../wait-for-it.sh"]
     restart: always
     working_dir: /code/myshop 
     volumes:
       - .:/code
-    ports:
-      - "8000:8000"
+    expose:
+      - "8000"
     environment:
       - DJANGO_SETTINGS_MODULE=myshop.settings.prod
       - POSTGRES_DB=postgres
@@ -56,6 +56,6 @@ services:
     ports:
       - "80:80"
     depends_on:
-      - web
+      - webapp
     networks:
       - default
