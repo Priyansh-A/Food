@@ -60,27 +60,16 @@ A modern, dockerized e-commerce platform built with Django, featuring shopping c
 
 ### Installation
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/Priyansh-A/Food.git
-   cd Food
-2. **Build in Docker**
-   ```bash
-   docker-compose up --build
-3. **bash command in case of wait-for-it.sh error**
-   ```bash
+1. **Copy the docker-compose-prod.yml and wait-for-it.sh file to your device**
+2. **Run the command**
+ ```bash
+   docker-compose -f "filename" up
+   ```
+3. **In case of .sh file error do**
+ ```bash
    dos2unix wait-for-it.sh
-4. **Create Superuser for admin privilages**
-   ```bash
-   docker-compose exec web python manage.py createsuperuser
-5. **Filling data in the site**
-   ```bash
-   docker-compose exec web python manage.py loaddata json/products.json
-6. **Adding the recommendations row**
-   ```bash
-   docker-compose exec web python manage.py populate_recommendations
-7. **Add coupons in the admin/ page and apply them to cart**
-8. **Esewa Sandbox test details**
+   ```
+4. **Esewa Sandbox test details**
    9806800001
    Nepal@123
    123456   
