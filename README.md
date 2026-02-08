@@ -74,3 +74,9 @@ A modern, dockerized e-commerce platform built with Django, featuring shopping c
    Nepal@123
    123456   
 
+**ScreenShots**
+![alt text](<screenshots/Screenshot 2026-02-08 131240.png>)
+![alt text](<screenshots/Screenshot 2026-02-08 131313.png>)
+![alt text](<screenshots/Screenshot 2026-02-08 131331.png>)
+![alt text](<screenshots/Screenshot 2026-02-08 131402.png>)
+![alt text](<screenshots/Screenshot 2026-02-08 131419.png>)
